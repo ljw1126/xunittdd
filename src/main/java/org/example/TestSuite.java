@@ -1,5 +1,7 @@
 package org.example;
 
+import org.springframework.core.annotation.AnnotationUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,7 +11,7 @@ public class TestSuite implements Test {
 
     public TestSuite(Class<? extends Test> testClass) {
         Arrays.stream(testClass.getMethods())
-                .filter(m -> m.getName().startsWith("test"))
+                .filter(m -> AnnotationUtils.findAnnotation(m, org.example.annotation.Test.class) != null)
                 .forEach(m -> {
                     try {
                         add(testClass.getConstructor(String.class).newInstance(m.getName()));
