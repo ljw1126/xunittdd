@@ -10,11 +10,16 @@ public class TestCase {
     }
 
     public void run() {
+        setUp();
+
         try {
             Method method = getClass().getMethod(name);
             method.invoke(this);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void setUp() {
     }
 }
