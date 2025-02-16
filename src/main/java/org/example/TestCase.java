@@ -9,7 +9,8 @@ public class TestCase {
         this.name = name;
     }
 
-    public void run() {
+    public TestResult run() {
+        TestResult result = new TestResult();
         setUp();
 
         try {
@@ -20,6 +21,7 @@ public class TestCase {
         }
 
         tearDown();
+        return result;
     }
 
     public void setUp() {
