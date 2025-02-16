@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestSuite {
-    List<WasRun> tests = new ArrayList<>();
+    List<TestCase> tests = new ArrayList<>();
 
-    public void add(WasRun test) {
+    public void add(TestCase test) {
         tests.add(test);
     }
 
     public void run(TestResult result) {
-        for (WasRun test : tests) {
+        for (TestCase test : tests) {
             test.run(result);
         }
     }
