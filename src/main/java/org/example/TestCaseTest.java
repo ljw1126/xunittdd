@@ -5,14 +5,8 @@ public class TestCaseTest extends TestCase {
         super(name);
     }
 
-    WasRun wasRun;
-
-    @Override
-    public void setUp() {
-        wasRun = new WasRun("testMethod");
-    }
-
     public void testTemplateMethod() {
+        WasRun wasRun = new WasRun("testMethod");
         wasRun.run();
         Assert.assertEquals("setUp testMethod", wasRun.log);
     }
