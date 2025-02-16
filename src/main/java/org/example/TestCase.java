@@ -19,7 +19,7 @@ public class TestCase {
             Method method = getClass().getMethod(name);
             method.invoke(this);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            result.testFailed();
         }
 
         tearDown();
