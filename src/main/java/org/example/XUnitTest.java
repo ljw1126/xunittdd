@@ -8,15 +8,5 @@ public class XUnitTest {
         suite.run(result);
 
         System.out.println(result.getSummary());
-
-        // 컴포지트 패턴 적용
-        TestSuite suite2 = new TestSuite();
-        suite2.add(new TestCaseTest("testTemplateMethod"));
-        suite2.add(suite);
-        TestResult result2 = new TestResult();
-
-        suite2.run(result2);
-
-        System.out.println(result2.getSummary());
     }
 }
