@@ -16,4 +16,5 @@ public class TestCaseTest extends TestCase {
         TestResult result = wasRun.run();
         Assert.assertEquals("1 run, 0 failed", result.getSummary());
     }
+
 }

@@ -11,6 +11,8 @@ public class TestCase {
 
     public TestResult run() {
         TestResult result = new TestResult();
+        result.testStarted();
+
         setUp();
 
         try {
